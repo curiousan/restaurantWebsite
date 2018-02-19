@@ -1,0 +1,36 @@
+body {
+    height: 3000px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#home {
+    height: 600px;
+    margin: auto;
+    background-color: #576263;
+}
+
+#about {
+    height: 500px;
+    background-color: #deeef0;
+}
+
+#menu {
+    background-color: beige;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width:1500px) {
+    .boxed-layout .wrapper {
+        width: 1180px;
+    }
+    .boxed-layout header.fixed-header {
+        width: 1180px;
+    }
+}
