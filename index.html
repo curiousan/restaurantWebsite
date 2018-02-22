@@ -7,68 +7,233 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-info navbar-light fixed-top">
             <!-- Logo Start  -->
             <a class="navbar-brand" href="index.html">
-                <img id="logo_img" src="assets/images/logo/dummy.png" alt="logo" title="logo" style="width:50px" />
+                <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+                <!-- <img id="logo_img" src="assets/images/logo/dummy.png" alt="logo" title="logo" style="width:50px" /> -->
             </a>
             <!-- Logo End  -->
 
-            <!-- Main meny Start  -->
-            <ul class="navbar-nav">
-                <li class="navbar-item">
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#about" class="nav-link">About us</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#menu" class="nav-link">Our Menu</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#reservation" class="nav-link">Reservation</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#contact" class="nav-link">Contact us</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger" aria-controls="hamburger" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="hamburger">
+                <!-- Main menu Start  -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="navbar-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#about" class="nav-link">About us</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#menu" class="nav-link">Our Menu</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#reservation" class="nav-link">Reservation</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#contact" class="nav-link">Contact us</a>
+                    </li>
+                </ul>
+            </div>
             <!-- Menu End  -->
         </nav>
-
-        <div id="home" class="slide">
-            <!-- images slider -->
-        </div>
-
-        <div id="about" class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h4>About us</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="menu" class="menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h4>Our Popular dishes</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur placerat nulla, in suscipit
-                            erat sodales id. Nullam ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis nulla.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
+
+    <div id="home" class="slide">
+        <!-- images slider -->
+        <div class="slideshow">
+            <div class="slideItem">
+                <img src="" alt="banner" class="img-fluid">
+            </div>
+            <div class="slideItem">
+                <img src="" alt="banner" class="img-fluid">
+            </div>
+            <div class="slideItem">
+                <img src="" alt="banner" class="img-fluid">
+            </div>
+        </div>
+        <div class="slide-detail text-center">
+            <div class="container">
+                <h4>Lorem Ipsum</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloremque magnam rerum fugit. Vitae, soluta
+                    sed perspiciatis odio ut eligendi laborum quaerat error et voluptates nostrum, repudiandae omnis maxime
+                    placeat?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h4>About us</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iure harum corporis omnis atque, adipisci
+                        pariatur eligendi eos doloribus, fugiat quisquam rerum, sint et obcaecati amet exercitationem eveniet
+                        necessitatibus consectetur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu" class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h4>Our Popular dishes</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur placerat nulla, in suscipit
+                        erat sodales id. Nullam ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis nulla.</p>
+                </div>
+                <div class="col-sm-12">
+                    <div class="dish">
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="" class="img-fluid">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="" class="img-fluid">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="" class="img-fluid">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                        <slideItem>
+                            <div class="box">
+                                <a href="">
+                                    <img src="" alt="" class="img-fluid">
+                                </a>
+                                <div class="caption">
+                                    <h4>Dish name</h4>
+                                    <span>Lorem ipsum dolor sit amet consectetur a Exeem ma</span>
+                                    <p>$10</p>
+                                </div>
+                            </div>
+                        </slideItem>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reservation" class="reservation text-center">
+        <div class="container ">
+            <h4>Book Your Table</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing eli t. Ipsum, quae nisi dolorem</p>
+            <button type="button" class="btn btn-info btn-lg">Book Now</button>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Get In Touch</h4>
+                </div>
+                <div class="col-sm-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. oloretum assumenda enim nihil libero, consequatur
+                        ad reiciend</p>
+                </div>
+                <div class="col-sm-7">
+                    <!-- Map integration -->
+                    <div class="map">
+                        <iframe src="#maplink" frameborder="1" style="width:auto;height:500px"></iframe>
+                    </div>
+                    <!-- Map ends -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button not working as of now. Need attention later -->
+    <!-- <button id="toTop"><span class="fa fa-arrow-circle-up"></span></button> -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Contact us</h5>
+                    <ul>
+                        <li>
+                            <span class="fa fa-map-marker"></span> Address</li>
+                        <li>
+                            <span class="fa fa-phone"></span>Mobile no.</li>
+                        <li>
+                            <span class="fa fa-envelope"></span>Email add</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6">
+                    <h5>Open hours</h5>
+                    <ul>
+                        <li>Mon-Fri: 09-23</li>
+                        <li>Sat: 11-22</li>
+                        <li>Sun: 11-23</li>
+                        <li>Lunch: 11-15</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
