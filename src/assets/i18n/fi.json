@@ -1,0 +1,52 @@
+{
+  "menu": {
+    "home": "Koti",
+    "about": "Meistä",
+    "reservation": "Varaus",
+    "contact" : "Ota yhteyttä",
+    "language"  : "Kieli",
+    "items" : "kohdetta"
+  },
+  "main-section": {
+    "title": "Oli kuitenkin",
+    "desc": ". En ai purjelaiva uteliaasti se hyvastinsa pyyhkimaan. Kohta te ei nahda hahah on kysyy tuo"
+  },
+
+  "about-section": {
+    "title":"Oli kuitenkin",
+    "desc": " En ai purjelaiva uteliaasti se hyvastinsa pyyhkimaan. Kohta te ei nahda hahah on kysyy tuoma. Et nuorten ne toimeen perassa.",
+    "other": "Vei vahan ota moisi miksi tytto saisi enhan. Naapurin jaa naisilla eri kun ela taakseen kalastus kullakin uskotaan. Onko ole pian anna kun tyly oli tuo. "
+  },
+
+  "dish-section": {
+    "title": " saanko en herran saahan ja",
+    "desc" : "Suurtakaan luulikohan hartioilla kaupunkien ai ei te en. En se on nauroivat loytamaan ryostavat pianaikaa ne merirosvo tahtoisin. Paivassa kimpussa poydalta ota liekiksi oli.",
+    "dish" : []
+  },
+
+  "reserve-section" : {
+    "title": "tyly oli tuo",
+    "desc" : "voi vastasi eri otetaan vai. Yha olevinasi jaa paastanyt rusinoita vielakaan sahvoorin",
+    "btn-text": "Iso tuo "
+  },
+  "info-section": {
+    "title": "oli tuo",
+    "desc" : "rusinoita vielakaan sahvoorin rosvoavat. Kaula ei missa olisi papan pthyi moisi he. Sen vapaus toi jos naytti elanyt saisit taalta ha"
+
+  },
+  "contact-section": {
+    "title": "kalia pelia",
+    "contact" : {
+      "add": "puhalsi",
+      "phone": "puhelinumero",
+      "email": "sandesh.poudel@email.com"
+    },
+    "hours": {
+      "title": "avoinna",
+      "week-day":"Man-Per",
+      "sat" :"Sa",
+      "sun": "Su",
+      "launch": "Lounas"
+    }
+  }
+}

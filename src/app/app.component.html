@@ -1,20 +1,172 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-info navbar-light fixed-top">
+        <!-- Logo Start  -->
+        <a class="navbar-brand" href="index.html">
+            <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+            <!-- <img id="logo_img" src="assets/images/logo/dummy.png" alt="logo" title="logo" style="width:50px" /> -->
+        </a>
+        <!-- Logo End  -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger" aria-controls="hamburger" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="hamburger">
+            <!-- Main menu Start  -->
+            <ul class="navbar-nav mx-auto">
+                <li class="navbar-item">
+               <a href="#home" class="nav-link active"> {{'menu.home' | translate | uppercase}}</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about" class="nav-link">{{'menu.about'  | translate | uppercase}}</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#menu" class="nav-link">{{'menu.items'  | translate | uppercase}}</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#reservation" class="nav-link">{{'menu.reservation'  | translate | uppercase }}</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact" class="nav-link">{{'menu.contact'  | translate | uppercase }}</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link dropdown-toggle" id="languageSelector" data-toggle="dropdown" aria-hashpopup="true" aria-expanded="false">{{'menu.language'| translate | uppercase}} </a>
+                    <div class="dropdown-menu" aria-labelledby="languageSelector">
+                      <a (click)="changeLanguage('en')" class="dropdown-item">English</a>
+                      <a (click)="changeLanguage('fi')" class="dropdown-item">Suomi</a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+        <!-- Menu End  -->
+    </nav>
+</div>
+
+<div id="home" class="slide">
+    <!-- images slider -->
+    <div class="slideshow">
+        <div class="slideItem">
+            <img src="" alt="banner" class="img-fluid">
+        </div>
+        <div class="slideItem">
+            <img src="" alt="banner" class="img-fluid">
+        </div>
+        <div class="slideItem">
+            <img src="" alt="banner" class="img-fluid">
+        </div>
+    </div>
+    <div class="slide-detail text-center">
+        <div class="container">
+            <h4>{{'main-section.title'|translate}}</h4>
+            <p>{{'main-section.desc' | translate}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h4>{{'about-section.title'|translate}}</h4>
+                <p>{{'about-section.desc'|translate}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="menu" class="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h4>{{'dish-section.title'|translate}}</h4>
+                <p>{{'dish-section.desc'|translate}}</p>
+            </div>
+            <div class="col-sm-12">
+                <div class="dish">
+                    <div class = "slideItem">
+                        <app-menu></app-menu>
+                    </div>
+                    <div class = "slideItem">
+                          <app-menu></app-menu>
+                    </div>
+                    <div class = "slideItem">
+                          <app-menu></app-menu>
+                    </div>
+                    <div class = "slideItem">
+                          <app-menu></app-menu>
+                    </div>
+                    <div class = "slideItem">
+                          <app-menu></app-menu>
+                    </div>
+                    <div class = "slideItem">
+                          <app-menu></app-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="reservation" class="reservation text-center">
+    <div class="container ">
+        <h4>{{'reserve-section.title'|translate}}</h4>
+        <p>{{'reserve-section.desc'|translate}}</p>
+        <button type="button" class="btn btn-info btn-lg">{{'reserve-section.btn-text'|translate}}</button>
+    </div>
+</div>
+
+<div id="contact" class="contact">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>{{'info-section.title'|translate}}</h4>
+            </div>
+            <div class="col-sm-5">
+                <p>{{'info-section.desc'|translate}}</p>
+            </div>
+            <div class="col-sm-7">
+                <!-- Map integration -->
+                <div class="map">
+                    <iframe src="#maplink" frameborder="1" style="width:auto;height:500px"></iframe>
+                </div>
+                <!-- Map ends -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button not working as of now. Need attention later -->
+<!-- <button id="toTop"><span class="fa fa-arrow-circle-up"></span></button> -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h5>{{'contact-section.title'|translate}}</h5>
+                <ul>
+                    <li>
+                        <span class="fa fa-map-marker"></span> {{'contact-section.contact.add'|translate}}</li>
+                    <li>
+                        <span class="fa fa-phone"></span>{{'contact-section.contact.phone'|translate}}</li>
+                    <li>
+                        <span class="fa fa-envelope"></span>{{'contact-section.contact.email'|translate}}</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6">
+                <h5>{{'contact-section.hours.title' | translate}}</h5>
+                <ul>
+                    <li>{{'contact-section.hours.week-day' | translate}}: 09-23</li>
+                    <li>{{'contact-section.hours.sat' | translate}}: 11-22</li>
+                    <li>{{'contact-section.hours.sun' | translate}}: 11-23</li>
+                    <li>{{'contact-section.hours.launch' | translate}}: 11-15 </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

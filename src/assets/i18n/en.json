@@ -1,0 +1,53 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About US",
+    "reservation": "Reservation",
+    "contact" : "Contact Us",
+    "items" : "Items",
+    "language"  :  "language"
+  },
+  "main-section": {
+    "title": "Lorem Ipsum",
+    "desc": "This is the main text"
+  },
+
+  "about-section": {
+    "title":"About us",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iure harum corporis omnis atque, adipisci pariatur eligendi eos doloribus, fugiat quisquam rerum, sint et obcaecati amet exercitationem eveniet necessitatibus consectetur.",
+    "other": ""
+  },
+
+  "dish-section": {
+    "title": "Our Popular dishes",
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur placerat nulla, in suscipit erat sodales id. Nullam ultricies eu turpis at accumsan. Mauris a sodales mi, eget lobortis nulla.",
+    "dish" : []
+  },
+
+  "reserve-section" : {
+    "title": "Book your table",
+    "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing eli t. Ipsum, quae nisi dolorem",
+    "btn-text": "Book Now"
+  },
+  "info-section": {
+    "title": "Get In Touch",
+    "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. oloretum assumenda enim nihil libero, consequatur ad reiciend"
+
+  },
+  "contact-section": {
+    "title": "contact-us",
+    "contact" : {
+      "add": "Address",
+      "phone": "Mobile no",
+      "email": "sandesh.poudel@email.com"
+    },
+    "hours": {
+      "title": "opening time",
+      "week-day":"Mon-Fri",
+      "sat" :"sat",
+      "sun": "sun",
+      "launch": "Launch"
+    }
+  }
+
+}
