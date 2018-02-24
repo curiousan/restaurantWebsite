@@ -5,6 +5,13 @@
 }
 .box .image {
   float: left;
+
+}
+.image img{
+  position: relative;
+  padding: 10px !important;
+  max-width: 140px;
+  max-height: 140px;
 }
 .box .caption {
   position: relative;
