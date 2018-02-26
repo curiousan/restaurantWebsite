@@ -80,6 +80,13 @@ nav ul li a:before {
     background-clip: padding-box;
 }
 
+#form{
+    border: 1px solid lightgray;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 20px lightgray, -7px -7px 20px lightgray;
+}
+
 #menu {
     padding: 60px 0;
     background-color: beige;
