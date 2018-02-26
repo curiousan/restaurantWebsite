@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {OnInit, OnDestroy } from '@angular/core';
 import Instafeed from 'instafeed.js';
 import { WebService } from './web.service';
+import { AgmCoreModule } from '@agm/core';
 
 
 @Component({
@@ -15,6 +16,8 @@ export class AppComponent {
 
 
   title = 'app';
+  lat = 60.2177863;
+  lng = 24.7721307;
 
 
   constructor(private translate: TranslateService, private webService: WebService){

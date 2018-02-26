@@ -110,8 +110,11 @@
       <div class="col-sm-7">
         <!-- Map integration -->
         <div class="map">
-          <iframe src="#maplink" frameborder="1" style="width:auto;height:500px"></iframe>
+         <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
         </div>
+
         <!-- Map ends -->
       </div>
     </div>
@@ -123,7 +126,7 @@
   <ul>
     <li *ngFor='let post of posts '><img src={{post.data[x].images.low_resolution.url}}></li>
   </ul>
-</div>  
+</div>
 
 <!-- Button not working as of now. Need attention later -->
 <!-- <button id="toTop"><span class="fa fa-arrow-circle-up"></span></button> -->

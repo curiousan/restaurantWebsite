@@ -9,6 +9,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { MenuListService } from './menu-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WebService } from './web.service';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,14 @@ import { WebService } from './web.service';
       useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
       deps: [Http]
     }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCWkXiYbw_MMP_1f_jTTAo9M88gyWIFQik'
+    })
 
 
 
   ],
-  providers: [MenuListService,WebService],
+  providers: [MenuListService, WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
