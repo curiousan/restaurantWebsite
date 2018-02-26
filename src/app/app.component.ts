@@ -15,10 +15,10 @@ export class AppComponent {
 
 
   title = 'app';
-  posts:[any];
+
 
   constructor(private translate: TranslateService, private webService: WebService){
-    this.posts = webService.getImages();
+
     translate.addLangs(['en', 'fi']);
     translate.setDefaultLang('en');
     let browserlang = translate.getBrowserLang();
