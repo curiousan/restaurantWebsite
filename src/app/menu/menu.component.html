@@ -2,7 +2,7 @@
 <div class="row">
 
 
-<div *ngFor="let item of menu"class="col-md-6 col-sm-6 col-xs-12" (click)="selectMenu(item.id)">
+<div *ngFor="let item of menu"class="col-md-6 col-sm-6 col-xs-12" (click)="selectMenu(item)" data-toggle="modal" data-target="#modalExample">
 
 
 <div  class="box">
@@ -11,7 +11,7 @@
 
   </div>
   <div class="caption">
-    <h4>{{item.name || uppercase }}</h4>
+    <h4>{{item.name | uppercase }}</h4>
     <p class="desc"><span *ngFor="let ing of item.ingredient"> {{ing}}</span></p>
     <span>{{item.desc}}</span>
     <div class="price">
@@ -22,4 +22,22 @@
 
 </div>
 </div>
+</div>
+<div *ngIf='selectedMenu' class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ selectedMenu.title | uppercase}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span>{{selectedMenu.desc}}</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

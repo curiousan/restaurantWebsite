@@ -5,29 +5,31 @@ import { TranslateModule , TranslateLoader, TranslateStaticLoader} from 'ng2-tra
 import { Http } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { AboutComponent } from './about/about.component';
 import { ReservationComponent } from './reservation/reservation.component';
-
+import { MenuListService } from './menu-list.service';
+import { HttpClientModule } from '@angular/common/http';
+import { WebService } from './web.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    AboutComponent,
+
     ReservationComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
       deps: [Http]
     }),
-  
+
 
 
   ],
-  providers: [],
+  providers: [MenuListService,WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

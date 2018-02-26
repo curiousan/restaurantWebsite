@@ -117,6 +117,13 @@
     </div>
   </div>
 </div>
+<!-- Sample Instagram feed section!! Need concrete implementation later -->
+
+<div id="instafeed">
+  <ul>
+    <li *ngFor='let post of posts '><img src={{post.data[x].images.low_resolution.url}}></li>
+  </ul>
+</div>  
 
 <!-- Button not working as of now. Need attention later -->
 <!-- <button id="toTop"><span class="fa fa-arrow-circle-up"></span></button> -->

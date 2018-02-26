@@ -5,6 +5,6 @@ export class Menu {
     desc: String;
     price: number;
     ingredient: [String];
-    glutFree : boolean;
-    lactFree : boolean;
+    glutFree: boolean;
+    lactFree: boolean;
 }
