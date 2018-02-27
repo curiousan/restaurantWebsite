@@ -12,13 +12,12 @@ body {
 }
 
 nav {
-    background-color: rgb(70, 98, 182);
+    background-color: rgb(202, 131, 63);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
-
 }
 
 .fixed-top {
@@ -58,6 +57,11 @@ nav ul li a:before {
   transition-timing-function: ease-out;
 }
 
+
+#logo_img{
+  width: 70%;
+  height:  4em;
+}
 #home {
   height: 600px;
 }
@@ -116,6 +120,10 @@ nav ul li a:before {
   margin-bottom: .8em;
   box-sizing: border-box;
   box-shadow: 7px 7px 20px lightgray, -7px -7px 20px lightgray;
+}
+
+.btn{
+  border-radius: 0;
 }
 
 /* botton to top defucnt as of now */

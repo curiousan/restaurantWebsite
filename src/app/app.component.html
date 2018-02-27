@@ -2,8 +2,8 @@
   <nav class="navbar navbar-expand-sm navbar-light fixed-top">
     <!-- Logo Start  -->
     <a class="navbar-brand" href="index.html">
-      <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
-      <!-- <img id="logo_img" src="assets/images/logo/dummy.png" alt="logo" title="logo" style="width:50px" /> -->
+      <!-- <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i> -->
+      <img id="logo_img" src="assets/images/logo.png" alt="logo" title="logo" />
     </a>
     <!-- Logo End  -->
 
@@ -112,8 +112,9 @@
   <div class="container ">
     <h4>{{'reserve-section.title'|translate}}</h4>
     <p>{{'reserve-section.desc'|translate}}</p>
-    <button type="button" class="btn btn-info btn-lg">{{'reserve-section.btn-text'|translate}}</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#reservationModal">{{'reserve-section.btn-text'|translate}}</button>
   </div>
+  <app-reservation></app-reservation>
 </div>
 
 <div id="contact" class="contact">
