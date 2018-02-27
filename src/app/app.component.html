@@ -1,5 +1,5 @@
 <div class="container">
-  <nav class="navbar navbar-expand-sm bg-info navbar-light fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top">
     <!-- Logo Start  -->
     <a class="navbar-brand" href="index.html">
       <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
@@ -47,20 +47,34 @@
 
 <div id="home" class="slide">
   <!-- images slider -->
-  <div class="slideshow">
-    <div class="slideItem">
-      <img src="" alt="banner" class="img-fluid">
+  <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 imgHeight" src="./assets/images/banner1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 imgHeight" src="./assets/images/banner2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 imgHeight" src="./assets/images/banner3.jpg" alt="Third slide">
+      </div>
     </div>
-    <div class="slideItem">
-      <img src="" alt="banner" class="img-fluid">
-    </div>
-    <div class="slideItem">
-      <img src="" alt="banner" class="img-fluid">
-    </div>
+
   </div>
-  <div class="slide-detail text-center">
+  <!-- <div class="slideshow">
+    <div class="slideItem">
+      <img src="./assets/images/banner1.jpg" alt="banner" class="img-fluid">
+    </div>
+    <div class="slideItem">
+      <img src="./assets/images/banner2.jpg" alt="banner" class="img-fluid">
+    </div>
+    <div class="slideItem">
+      <img src="./assets/images/banner3.jpg" alt="banner" class="img-fluid">
+    </div>
+  </div> -->
+  <div class="bannerDetail text-center">
     <div class="container">
-      <h3>{{'main-section.title'|translate}}</h3>
+      <h2>{{'main-section.title'|translate}}</h2>
       <p>{{'main-section.desc' | translate}}
       </p>
     </div>
@@ -103,13 +117,13 @@
 </div>
 
 <div id="contact" class="contact">
-  <div class="container text-center">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 text-center">
         <h4>{{'info-section.title'|translate}}</h4>
+        <p>{{'info-section.desc'|translate}}</p>
       </div>
       <div class="col-sm-5">
-        <p>{{'info-section.desc'|translate}}</p>
         <form action="" id="form">
           <div class="form-group">
             <label for="inputName">Name</label>
@@ -121,18 +135,18 @@
           </div>
           <div class="form-group">
             <label for="inputMsg">Feedback</label>
-            <textarea class="form-control" >
+            <textarea class="form-control" rows="4" placeholder="Feedback"></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info btn-block">Submit</button>
           </div>
         </form>
       </div>
       <div class="col-sm-7">
         <!-- Map integration -->
         <div class="map">
-         <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-map [latitude]="lat" [longitude]="lng">
             <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
           </agm-map>
         </div>

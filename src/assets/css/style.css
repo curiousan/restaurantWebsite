@@ -1,117 +1,121 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: auto;
-    width: 1500px;
-    max-width: 100%;
-    -webkit-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  width: 1500px;
+  max-width: 100%;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.5);
 }
 
 nav {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    background-color: rgb(70, 98, 182);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
 }
 
 .fixed-top {
-    width: 1500px;
-    margin: auto;
-    max-width: 100%;
+  width: 1500px;
+  margin: auto;
+  max-width: 100%;
 }
 
 nav>a>i {
-    color: rgb(219, 213, 174);
+  color: rgb(219, 213, 174);
 }
 
 nav {
-    font-weight: 500;
-    padding: 0;
-    line-height: 14px;
-    text-transform: uppercase;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    position: relative;
+  font-weight: 500;
+  padding: 0;
+  line-height: 14px;
+  text-transform: uppercase;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
 }
 
 nav ul li a:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 100%;
-    right: 0;
-    top: 20px;
-    background: #e54c2a;
-    height: 4px;
-    -webkit-transition-property: left;
-    transition-property: left;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-
-.text-center {
-    text-align: center;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 100%;
+  right: 0;
+  top: 20px;
+  background: #e54c2a;
+  height: 4px;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 #home {
+  height: 600px;
+}
+
+.imgHeight {
     height: 600px;
-    padding: 60px 0;
-    background-color: #576263;
-    border-top: 60px solid transparent;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
 }
 
+.bannerDetail{
+    position: relative;
+    z-index: 1;
+    margin-top: -300px;
+    font-size: 3em;
+    color: whitesmoke;
+}
 #about {
-    height: 500px;
-    background-color: #deeef0;
-    padding: 60px 0;
-    top: 60px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-}
-
-#form{
-    border: 1px solid lightgray;
-    padding: 25px;
-    box-sizing: border-box;
-    box-shadow: 7px 7px 20px lightgray, -7px -7px 20px lightgray;
+  height: 500px;
+  background-color: #deeef0;
+  padding: 60px 0;
+  top: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 #menu {
-    padding: 60px 0;
-    background-color: beige;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+  padding: 60px 0;
+  background-color: beige;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 #reservation {
-    padding: 60px 0;
-    border-top: 60px solid transparent;
-    background-color: #576263;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+  padding: 60px 0;
+  border-top: 60px solid transparent;
+  background-color: #576263;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 #contact {
-    border-top: 60px solid transparent;
-    padding: 60px 0;
-    margin-top: -60px;
-    background-color: #63969c;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+  border-top: 60px solid transparent;
+  padding: 60px 0;
+  margin-top: -60px;
+  background-color: #f0f4f5;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+#form {
+  border: 1px solid lightgray;
+  padding: 25px;
+  margin-bottom: .8em;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 20px lightgray, -7px -7px 20px lightgray;
 }
 
 /* botton to top defucnt as of now */
@@ -129,47 +133,49 @@ nav ul li a:before {
 } */
 
 footer {
-    padding: 60px 0;
-    border-top: 60px solid transparent;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
+  padding: 60px 0;
+  border-top: 60px solid transparent;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 footer h5 {
-    text-transform: uppercase;
-    font-weight: 600;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 20px;
 }
 
 footer ul li {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 footer ul li span {
-    color: rgb(73, 185, 148);
-    margin-right: 15px;
-    line-height: 30px;
+  color: rgb(73, 185, 148);
+  margin-right: 15px;
+  line-height: 30px;
 }
 
 /* Responsive */
 
 @media (max-width:1500px) {
-    body{
-        width: 1190px;
-    }
-    .fixed-top{
-        width: 1190px;
-    }
+  body {
+    width: 1190px;
+  }
+  .fixed-top {
+    width: 1190px;
+  }
 }
 
-@media (max-width: 1200px){
-    body{
-        width:100%;
-    }
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
 }
+
+
