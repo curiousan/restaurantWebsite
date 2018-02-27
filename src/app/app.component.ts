@@ -7,6 +7,7 @@ import { WebService } from './web.service';
 import { AgmCoreModule } from '@agm/core';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +19,6 @@ export class AppComponent {
   title = 'app';
   lat = 60.2177863;
   lng = 24.7721307;
-
 
   constructor(private translate: TranslateService, private webService: WebService){
 
@@ -33,10 +33,10 @@ export class AppComponent {
     this.translate.use(lang);
   }
 
- OnInit() {
-
-
-  }
+ ngOnInit() {
+  this.webService.getCars();
+  this.webService.getImage();
+}
 
 
 }
