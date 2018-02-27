@@ -1,3 +1,128 @@
-<p>
-  reservation works!
-</p>
+<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Make a reservation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST">
+          <div class="form-group form-row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-calendar input-group-text"></i>
+                </div>
+                <input name="resDate" type="date" class="form-control" placeholder="Date" required>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-clock-o input-group-text"></i>
+                </div>
+                <select name="resTime" class="form-control" required="">
+                  <option value="" selected="">Time</option>
+                  <optgroup label="Morning">
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                  </optgroup>
+                  <optgroup label="Lunch">
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="14:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                  </optgroup>
+                  <optgroup label="Dinner">
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group form-row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-user input-group-text"></i>
+                </div>
+                <select name="resGuests" class="form-control" required="">
+                  <option value="" selected="">No of guests</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="More than 9">Yli 9</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-user-circle input-group-text"></i>
+                </div>
+                <input name="resName" type="text" class="form-control" placeholder="Name" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group form-row">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-mobile input-group-text"></i>
+                </div>
+                <input name="resPhone" type="tel" class="form-control" placeholder="Phone No" required>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fa fa-envelope  input-group-text"></i>
+                </div>
+                <input name="redEmail" type="email" class="form-control" placeholder="Email" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <i class="fa fa-pencil input-group-text"></i>
+              </div>
+              <textarea name="resMsg" class="form-control" rows="4" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
