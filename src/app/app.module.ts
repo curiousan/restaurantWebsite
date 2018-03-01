@@ -4,20 +4,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateModule , TranslateLoader, TranslateStaticLoader} from 'ng2-translate';
 import { Http, BrowserXhr } from '@angular/http';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { MenuListService } from './menu-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WebService } from './web.service';
 import { AgmCoreModule } from '@agm/core';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule} from 'angularfire2/firestore';
+import { environment } from './../environments/environment';
+import { BeverageComponent } from './beverage/beverage.component';
+import { AlaCarteComponent } from './ala-carte/ala-carte.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
 
-    ReservationComponent
+    ReservationComponent,
+
+    BeverageComponent,
+
+    AlaCarteComponent
   ],
   imports: [
     BrowserModule,
@@ -29,12 +35,15 @@ import { AgmCoreModule } from '@agm/core';
     }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCWkXiYbw_MMP_1f_jTTAo9M88gyWIFQik'
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule.enablePersistence()
+
 
 
 
   ],
-  providers: [MenuListService, WebService],
+  providers: [ WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

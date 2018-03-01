@@ -1,1 +1,5 @@
 
+.instafeed .box {
+border-radius: 4px 4px 0 0;
+max-width: 250px;
+}

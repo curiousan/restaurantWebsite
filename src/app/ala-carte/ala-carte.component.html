@@ -2,12 +2,12 @@
 <div class="row">
 
 
-<div *ngFor="let item of menu"class="col-md-6 col-sm-6 col-xs-12" (click)="selectMenu(item)" data-toggle="modal" data-target="#modalExample">
+<div *ngFor="let item of food | async"class="col-md-6 col-sm-6 col-xs-12" (click)="selectFood(item)" data-toggle="modal" data-target="#modalExample">
 
 
 <div  class="box">
   <div class="image">
-    <img src="assets/images/menu-items/{{item.image}}" alt="image" title="image" class="img-responsive">
+    <img src="assets/images/food-images/{{item.images[0]}}" alt="image" title="image" class="img-responsive">
 
   </div>
   <div class="caption">
@@ -23,26 +23,28 @@
 </div>
 </div>
 </div>
-<div *ngIf='selectedMenu' class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div *ngIf='selectedFood' class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{ selectedMenu.name| uppercase}}</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{ selectedFood.name| uppercase}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <img class="d-block img-fluid" src="../../assets/images/menu-items/cheese-naaan.png" alt="First slide">
+      <div  class="carousel-inner" role="listbox">
+        <div  class="carousel-item active">
+          <img  class="d-block img-fluid" src="../../assets/images/food-images/{{selectedFood.images[0]}}">
         </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="../../assets/images/menu-items/momo.png" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="../../assets/images/menu-items/newari-food.png" alt="Third slide">
-        </div>
+
+
+        <div *ngFor="let image of selectedFood.images" class=" carousel-item ">
+            <img  class="d-block img-fluid" src="../../assets/images/food-images/{{image}}">
+          </div>
+      
+
+
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,11 +56,11 @@
       </a>
       </div>
       <div class="modal-body">
-        <div>{{selectedMenu.desc}}</div>
-        <div>{{selectedMenu.ingredient}}</div>
-        <div>{{selectedMenu.price}}</div>
-        <div>Glueten free : {{selectedMenu.glutFree}}</div>
-        <div>Glueten free : {{selectedMenu.lactFree}}</div>
+        <div>{{selectedFood.desc}}</div>
+        <div>{{selectedFood.ingredient}}</div>
+        <div>{{selectedFood.price}}</div>
+        <div>Glueten free : {{selectedFood.glut-free}}</div>
+        <div>Glueten free : {{selectedFood.lact-free}}</div>
 
       </div>
 

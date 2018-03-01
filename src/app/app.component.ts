@@ -15,7 +15,7 @@ import { AgmCoreModule } from '@agm/core';
 })
 export class AppComponent {
 
-
+  images: string[];
   title = 'app';
   lat = 60.2177863;
   lng = 24.7721307;
@@ -24,7 +24,7 @@ export class AppComponent {
 
     translate.addLangs(['en', 'fi']);
     translate.setDefaultLang('en');
-    let browserlang = translate.getBrowserLang();
+    const browserlang = translate.getBrowserLang();
     translate.use(browserlang);
   }
 
@@ -33,10 +33,11 @@ export class AppComponent {
     this.translate.use(lang);
   }
 
- ngOnInit() {
-  this.webService.getCars();
-  this.webService.getImage();
+  ngOnInit() {
+  this.images = this.webService.getImage();
 }
+
+
 
 
 }
