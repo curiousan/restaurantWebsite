@@ -29,9 +29,9 @@ export class WebService {
      // tslint:disable-next-line:no-unused-expression
 
     this.http.get('https://api.instagram.com/v1/users/self/media/recent/?access_token='+this.ACCESS_TOKEN+'&count=2').subscribe(data =>{
-      data.data.forEach(element => {
-        this.imagesUrl.push(element.images.low_resolution.url);
-      });
+      // data.data.forEach(element => {
+      //   this.imagesUrl.push(element.images.low_resolution.url);
+      // });
      },
     err => {
       console.log('Error');

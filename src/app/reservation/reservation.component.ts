@@ -12,4 +12,6 @@ export class ReservationComponent implements OnInit {
   ngOnInit() {
   }
 
+  today = new Date().toJSON().split('T')[0];
+
 }
