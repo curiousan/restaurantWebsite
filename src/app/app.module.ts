@@ -14,16 +14,13 @@ import { environment } from './../environments/environment';
 import { BeverageComponent } from './beverage/beverage.component';
 import { AlaCarteComponent } from './ala-carte/ala-carte.component';
 
+import { DishesComponent } from './dishes/dishes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     ReservationComponent,
-
-    BeverageComponent,
-
-    AlaCarteComponent
+    DishesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +35,6 @@ import { AlaCarteComponent } from './ala-carte/ala-carte.component';
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence()
-
-
-
 
   ],
   providers: [ WebService],
