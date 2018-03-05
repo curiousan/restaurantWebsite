@@ -1,0 +1,83 @@
+<div class="menu">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h4>Our Menu</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing euam itaque eveniet explicabo temporibus neque tenetur. Error,
+        quis.
+      </p>
+    </div>
+    <div class="col-sm-12">
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+          <a href="#mon" class="nav-link" (click) ="selectDay('monday')" data-toggle="tab" aria-expanded="true">Monday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tue" class="nav-link" (click) ="selectDay('tuesday')" data-toggle="tab" aria-expanded="false">Tuesday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#wed" class="nav-link" (click) ="selectDay('wednesday')" data-toggle="tab" aria-expanded="false">Wednesday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#thurs" class="nav-link" (click) ="selectDay('thursday')" data-toggle="tab" aria-expanded="false">Thursday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#fri" class="nav-link" (click) ="selectDay('friday')" data-toggle="tab" aria-expanded="false">Friday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#sat" class="nav-link" data-toggle="tab" (click) ="selectDay('saturday')" aria-expanded="false">Saturday</a>
+        </li>
+        <li class="nav-item">
+          <a href="#sun" class="nav-link" data-toggle="tab" (click) ="selectDay('sunday')" aria-expanded="false">Sunday</a>
+        </li>
+      </ul>
+      <!-- Days tab ended -->
+
+      <!-- Menu content -->
+      <div *ngIf="day" class="row">
+
+        <div *ngFor="let item of menus | async" id="#mon" class="col-md-6 col-sm-6 col-xs-12" (click)="selectMenu(item)" data-toggle="modal"
+          data-target="#modalExample">
+
+
+          <div class="box">
+            <div class="image">
+              <img src="assets/images/launch-images/{{item.images[0]}}" alt="image" title="image" class="img-responsive">
+
+            </div>
+            <div class="caption">
+              <h4>{{item.name| uppercase }}</h4>
+              <p class="desc">
+                <span *ngFor="let ing of item.ingredient"> {{ing}}</span>
+              </p>
+              <span>{{item.description}}</span>
+              <div class="price">
+                {{item.price}}€
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div *ngIf='selectedMenu' class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{ selectedMenu.title | uppercase}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>{{selectedMenu.desc}}</span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
